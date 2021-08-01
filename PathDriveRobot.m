@@ -28,7 +28,8 @@ robotCurrentPose = [robotInitialLocation initialOrientation]';
 
 %% Create a Kinematic Robot Model
 %Initialize the robot model and assign an initial pose. 
-% The simulated robot has kinematic equations for the motion of a two-wheeled differential drive robot. The inputs to this simulated robot are linear and angular velocities.
+% The simulated robot has kinematic equations for the motion of a two-wheeled differential drive robot.
+% The inputs to this simulated robot are linear and angular velocities.
 
 robot = differentialDriveKinematics("TrackWidth", 1, "VehicleInputs", "VehicleSpeedHeadingRate");
 
@@ -45,7 +46,9 @@ title(titletext,subtitletext)
 text(11,-1.3,txt)
 
 %% Define the Path Following Controller
-% Based on the path defined above and a robot motion model, you need a path following controller to drive the robot along the path. Create the path following controller using the controllerPurePursuit object.
+% Based on the path defined above and a robot motion model, you need a path
+% following controller to drive the robot along the path. Create the path 
+% following controller using the controllerPurePursuit object.
 controller = controllerPurePursuit;
 
 % Use the path defined above to set the desired waypoints for the controller
